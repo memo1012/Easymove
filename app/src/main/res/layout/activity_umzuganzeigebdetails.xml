@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.easymove.UmzuganzeigenDetails"
+    android:background="#ff000000"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <fragment
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="800dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Umzugvon"
+
+        android:text="Von:"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:layout_alignStart="@+id/HelfenButton"
+        android:layout_alignTop="@+id/button" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Umzugnach"
+
+        android:layout_marginTop="27dp"
+        android:text="Nach: "
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:layout_below="@+id/Umzugvon"
+        android:layout_alignLeft="@+id/Umzugvon"
+        android:layout_alignStart="@+id/Umzugvon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Umzugam"
+        android:layout_marginTop="26dp"
+        android:text="Datum"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:layout_below="@+id/Umzugnach"
+        android:layout_alignRight="@+id/Umzugnach"
+        android:layout_alignEnd="@+id/Umzugnach" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ich helfe"
+        android:id="@+id/HelfenButton"
+        android:layout_marginLeft="95dp"
+        android:textColor="#FFFFFF"
+        android:layout_below="@+id/nichtHelfen"
+        android:layout_toEndOf="@+id/button4"
+        android:layout_marginStart="97dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mein Profil"
+        android:id="@+id/button2"
+        android:layout_below="@+id/Umzugvon"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#FFFFFF"
+        android:layout_above="@+id/TextEditBeschreibung" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Umzüge"
+        android:id="@+id/button3"
+        android:textColor="#FFFFFF"
+        android:layout_below="@+id/Umzugam"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="53dp"
+        android:layout_alignRight="@+id/button2"
+        android:layout_alignEnd="@+id/button2"
+        android:layout_above="@+id/nichtHelfen" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipps"
+        android:id="@+id/button4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/button3"
+        android:layout_alignEnd="@+id/button3"
+        android:layout_above="@+id/listViewKommi"
+        android:textColor="#FFFFFF"
+        android:layout_below="@+id/button3" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:id="@+id/button5"
+        android:layout_marginTop="130dp"
+        android:layout_below="@+id/HelfenButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/HelfenButton"
+        android:layout_toStartOf="@+id/HelfenButton"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Beschreibung/Hinweis vom Umziehenden:"
+        android:id="@+id/TextEditBeschreibung"
+        android:textColor="@android:color/white"
+        android:layout_alignTop="@+id/button3"
+        android:layout_alignLeft="@+id/Umzugnach"
+        android:layout_alignStart="@+id/Umzugnach" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_below="@+id/TextEditBeschreibung"
+        android:layout_alignLeft="@+id/TextEditBeschreibung"
+        android:layout_alignStart="@+id/TextEditBeschreibung"
+        android:layout_alignRight="@+id/TextEditBeschreibung"
+        android:layout_alignEnd="@+id/TextEditBeschreibung"
+        android:background="@android:color/darker_gray"
+        android:layout_above="@+id/button4" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextKomm"
+        android:background="@android:color/darker_gray"
+        android:layout_above="@+id/listViewKommi"
+        android:layout_alignLeft="@+id/HelfenButton"
+        android:layout_alignStart="@+id/HelfenButton"
+        android:layout_alignTop="@+id/SaveKommiButton"
+        android:layout_alignRight="@+id/nichtHelfen"
+        android:layout_alignEnd="@+id/nichtHelfen" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kommentar speichern"
+        android:id="@+id/SaveKommiButton"
+        android:layout_toEndOf="@+id/nichtHelfen"
+        android:layout_toLeftOf="@android:id/list"
+        android:layout_toStartOf="@android:id/list"
+        android:layout_toRightOf="@+id/nichtHelfen"
+        android:layout_above="@+id/listViewKommi"
+        android:textColor="#FFFFFF" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listViewHelfer"
+        android:background="#889988"
+        android:layout_below="@+id/editText"
+        android:layout_alignStart="@+id/SaveKommiButton"
+        android:layout_above="@+id/SaveKommiButton"
+        android:layout_toStartOf="@android:id/list" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@android:id/list"
+        android:visibility="invisible"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/map"
+        android:layout_alignParentTop="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listViewKommi"
+        android:background="#889988"
+        android:layout_alignStart="@+id/editTextKomm"
+        android:layout_toLeftOf="@android:id/list"
+        android:layout_toStartOf="@android:id/list"
+        android:layout_alignTop="@+id/button5" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nicht helfen"
+        android:id="@+id/nichtHelfen"
+        android:layout_centerVertical="true"
+        android:layout_alignEnd="@+id/editText"
+        android:layout_toEndOf="@+id/HelfenButton"
+        android:textColor="#ffffffff"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="   Helfer:"
+        android:id="@+id/textView5"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_toRightOf="@+id/editText"
+        android:layout_toEndOf="@+id/editText"
+        android:textColor="#FFFFFF"
+        android:textSize="16dp" />
+
+</RelativeLayout>

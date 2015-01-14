@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:background="#ff000000"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    style="@android:style/TextAppearance.Holo.SearchResult.Title"
+   >
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView16"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#faffffff"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="451dp" />
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Tipps"
+        android:id="@+id/TippButton"
+        android:textColor="#faffffff"
+        android:height="150dp"
+        android:layout_alignTop="@+id/Homebutton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="169dp"
+        android:layout_height="0dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Logout"
+        android:id="@+id/Homebutton"
+        android:textColor="#faffffff"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="340dp" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Logout"
+        android:id="@+id/Homelogbutton"
+        android:textColor="#faffffff"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentBottom="true"
+        android:height="150dp"
+        android:layout_below="@+id/TippButton"
+        android:layout_alignRight="@+id/TippButton"
+        android:layout_alignEnd="@+id/TippButton" />
+
+    <Button
+        android:layout_width="259dp"
+        android:layout_height="69dp"
+        android:text="Neuen Umzug erstellen"
+        android:id="@+id/ZurückButton"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#faffffff"
+        android:layout_toEndOf="@+id/Homebutton"
+        android:layout_below="@+id/textView16"
+        android:layout_toRightOf="@+id/Homebutton"
+        android:layout_marginLeft="220dp" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Suchen"
+        android:id="@+id/SelectUmzugeButton"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#faffffff"
+        android:layout_alignBaseline="@+id/Homebutton"
+        android:layout_alignBottom="@+id/Homebutton"
+        android:layout_alignStart="@+id/SelectVonText" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="743dp"
+        android:id="@+id/linearLayout"></LinearLayout>
+
+    <ListView
+        android:layout_width="572dp"
+        android:layout_height="138dp"
+        android:id="@+id/Umzugsliste"
+        android:background="#889988"
+        android:layout_gravity="center_horizontal"
+        android:layout_toEndOf="@+id/textView16"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/ZurückButton"
+        android:layout_alignStart="@+id/ZurückButton"
+        android:layout_below="@+id/UserBearbeitenButton" />
+
+
+    <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="416dp"
+        android:layout_height="63dp"
+        android:id="@android:id/list"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/Umzugsliste"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="864dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="1311dp">
+    </ListView>
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Umzüge"
+        android:id="@+id/button"
+        android:textColor="#faffffff"
+        android:checked="false"
+        android:height="150dp"
+        android:layout_above="@+id/TippButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Mein Profil"
+        android:id="@+id/UserBearbeitenButton"
+        android:textColor="#faffffff"
+        android:height="100dp"
+        android:layout_above="@+id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/ZurückButton"
+        android:layout_alignRight="@+id/button"
+        android:layout_alignEnd="@+id/button" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Umzug von"
+        android:id="@+id/SelectVonText"
+        android:layout_toEndOf="@+id/Umzugsliste"
+        android:layout_alignTop="@+id/Umzugsliste"
+        android:layout_toRightOf="@+id/Umzugsliste"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"/>
+
+
+</RelativeLayout>
